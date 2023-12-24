@@ -1,0 +1,480 @@
+@import './styles.sass'
+
+@media only screen and ( max-width:  1300px)
+  .wrapper
+    max-width: 1200px
+
+@media only screen and ( max-width:  1200px)
+  .wrapper
+    max-width: 1100px
+
+  /***********      country-package      ***********/
+  .country-package
+    .item
+      &:nth-child(1)
+        height: 300px
+
+      &:nth-child(6)
+        height: 300px
+
+@media only screen and ( max-width:  1100px)
+  .wrapper
+    max-width: 1000px
+
+  /***********      special-package      ***********/
+  .special-package
+    .list
+      @include grid($columns: 1fr 1fr)
+
+  /***********      gallery      ***********/
+  .gallery
+    .list
+      @include grid($columns: 1fr 1fr 1fr)
+
+@media only screen and ( max-width:  1000px)
+  .wrapper
+    max-width: 800px
+
+  /***********      title      ***********/
+  .title
+    font-size: 27px
+
+  /***********      Banner      ***********/
+  .banner
+    .search-section
+      flex-direction: column
+
+      .content-area
+        text-align: center
+        margin-bottom: 2rem
+
+    .swiper-slide
+      .item
+        height: 700px
+
+  /***********      adventure-ideas      ***********/
+  .adventure-ideas
+    .list
+      @include grid($columns: 1fr 1fr 1fr)
+
+  /***********      testinomial      ***********/
+  .testinomial
+    .item
+      padding: 0 6rem
+
+  /***********      about-page      ***********/
+  .about-page
+    .section
+      @include grid($columns: 1fr)
+
+  /***********      explore-activities      ***********/
+  .explore-activities
+    .list
+      @include grid($columns: 1fr 1fr 1fr)
+
+  /***********      blog      ***********/
+  .blog
+    .list
+      @include grid($columns: 1fr 1fr)
+
+  /*************    product-details-page     *************/
+  .product-details-page
+    grid-template-columns: 1fr
+    display: block
+
+    .images
+      display: none
+      // height: 400px
+
+      .image-preview
+        height: 70%
+
+      .images-list
+        img
+          height: 60px
+          width: 60px
+
+  /***********      blog-details-page      ***********/
+  .blog-details-page
+    .wrapper
+      display: grid
+      grid-template-columns: 1fr
+
+  .hotels
+    .divide-sec
+      @include grid($columns: 1fr)
+      position: relative
+
+      .list
+        .title
+          @include flex($justify: space-between)
+
+          i
+            font-size: 16px
+            height: 40px
+            width: 40px
+            border-radius: 50%
+            background-color: $main
+            color: $light
+            @include flex($justify: center)
+            cursor: pointer
+
+      .filter-section
+        position: fixed
+        top: 0
+        left: -400px
+        background-color: rgba($light, .8)
+        backdrop-filter: blur(5px)
+        height: 100%
+        z-index: 100
+        padding: 1rem
+        box-shadow: 3px 0 10px rgba($dark, .1)
+        pointer-events: none
+        @include trans()
+        overflow: auto
+
+        &.active
+          left: 0
+          pointer-events: auto
+
+        .title
+          @include flex($justify: space-between)
+
+          i
+            font-size: 14px
+            @include flex($justify: center)
+            background-color: rgba($dark, .5)
+            height: 25px
+            width: 25px
+            border-radius: 50%
+            color: $light
+            cursor: pointer
+
+        .item
+          box-shadow: 0 3px 10px rgba($dark, .1)
+
+@media only screen and ( max-width:  800px)
+  .wrapper
+    max-width: 600px
+
+  /***********      Header      ***********/
+  header
+    .wrapper
+      .nav-links
+        display: none
+
+      .side-nav-btn
+        display: flex
+
+  /***********      country-package      ***********/
+  .country-package
+    grid-template-areas: 'item1 item1 item1 item1' 'item2 item2 item3 item3' 'item4 item4 item5 item5' 'item6 item7 item7 item8' 'item6 item7 item7 item8'
+
+    .item
+      &:nth-child(1)
+        height: 200px
+
+      &:nth-child(2)
+        height: 170px
+
+      &:nth-child(4)
+        height: 170px
+
+      &:nth-child(6)
+        height: 200px
+
+      .name
+        font-size: 16px
+
+  /***********      special-package      ***********/
+  .special-package
+    .list
+      @include grid($columns: 1fr)
+
+  /***********      adventure-ideas      ***********/
+  .adventure-ideas
+    .list
+      @include grid($columns: 1fr 1fr)
+
+  /***********      gallery      ***********/
+  .gallery
+    .list
+      @include grid($columns: 1fr 1fr)
+
+  /***********      about      ***********/
+  .about
+    @include grid($columns: 1fr)
+
+    .image-sec
+      display: none
+
+  /***********      footer      ***********/
+  footer
+    .footer-list
+      @include grid($columns: 1fr 1fr)
+
+  /***********      explore-activities      ***********/
+  .explore-activities
+    .list
+      @include grid($columns: 1fr 1fr)
+
+  /***********      blog      ***********/
+  .blog
+    .list
+      @include grid($columns: 1fr)
+
+  /***********      contact-page      ***********/
+  .contact-page
+    .section
+      @include grid($columns: 1fr)
+
+  /***********      hotels      ***********/
+  .hotels
+    .list
+      .item
+        .body
+          .image-sec
+            margin-right: 4px
+            width: 35%
+            height: 140px
+
+          .details-sec
+            width: 65%
+            padding: .6rem
+
+            .info-sec
+              .top
+                margin-bottom: .5rem
+
+                .name
+                  font-size: 15px
+                  margin-bottom: .2rem
+
+                  a
+                    color: $main
+
+                .desc
+                  line-height: 1.2rem
+                  font-size: 14px
+                  max-height: 60px
+
+              .rating
+                .rev
+                  font-size: 14px
+
+                .stars
+                  svg
+                    height: 14px
+                    width: 14px
+
+            .price-sec
+              font-size: 17px
+
+  .hotel-details
+    .details
+      @include grid($columns: 1fr)
+
+      .information
+        .title-sec
+          .name
+            font-size: 18px
+
+          button
+            @include button()
+            padding: .4rem .7rem
+            font-size: 16px
+
+        .rating
+          .stars
+            svg
+              height: 14px
+              width: 14px
+
+@media only screen and ( max-width:  600px)
+  button
+    padding: .5rem .7rem !important
+    font-size: 14px !important
+
+  .wrapper
+    max-width: 400px
+    padding: 0 20px
+
+  /***********      title      ***********/
+  .title
+    font-size: 24px
+
+  /***********      country-package      ***********/
+  .country-package
+    grid-template-areas: 'item1 item1 item1 item1' 'item2 item2 item3 item3' 'item4 item4 item5 item5' 'item7 item7 item7 item7' 'item6 item6 item8 item8'
+
+    .item
+
+      &:nth-child(1)
+        height: 200px
+
+      &:nth-child(2)
+        height: 140px
+
+      &:nth-child(4)
+        height: 140px
+
+      &:nth-child(6)
+        height: 200px
+
+      &:nth-child(7)
+        height: 200px
+
+      .package
+        font-size: 10px
+        padding: .2rem .4rem
+
+      .name
+        font-size: 14px
+
+  /***********      adventure-ideas      ***********/
+  .adventure-ideas
+    .list
+      @include grid($columns: 1fr)
+
+  /***********      about      ***********/
+  .about
+    .text-sec
+      h2
+        font-size: 24px
+
+      p
+        font-size: 16px
+
+  /***********      gallery      ***********/
+  .gallery
+    .list
+      @include grid($columns: 1fr)
+
+  /***********      testinomial      ***********/
+  .testinomial
+    max-width: 1000px
+
+    .item
+      padding: 0 2rem
+
+  /***********      footer      ***********/
+  footer
+    .footer-list
+      @include grid($columns: 1fr)
+
+  /***********      about-page      ***********/
+  .about-page
+    .section
+      @include grid($columns: 1fr)
+
+      .text-sec
+        .sec-title
+          font-size: 20px
+          margin-bottom: 6px
+
+        p
+          font-size: 16px
+
+      .image-sec
+        height: 305px
+
+        img
+          &:nth-child(1)
+            height: 97px
+
+          &:nth-child(2)
+            height: 200px
+
+          &:nth-child(3)
+            height: 200px
+
+          &:nth-child(4)
+            height: 97px
+
+  /***********      explore-activities      ***********/
+  .explore-activities
+    .list
+      @include grid($columns: 1fr)
+
+  /***********      contact-page      ***********/
+  .contact-page
+    .section
+      .form-section
+        .groups
+          @include grid($columns: 1fr)
+          grid-gap: 0
+
+      .info-section
+        color: $light
+        padding: 1rem
+
+        .title
+          font-size: 22px
+
+        ul
+          li
+            margin-bottom: 1rem
+
+            i
+              height: 30px
+              width: 30px
+              font-size: 14px
+
+            span
+              font-size: 13px
+
+        .icon-list
+          margin-top: 1rem
+
+          i
+            height: 30px
+            width: 30px
+            font-size: 14px
+
+  /***********      blog-details-page      ***********/
+  .blog-details-page
+    .image
+      height: 200px
+
+    .details
+      .name
+        font-size: 20px
+        line-height: 1.3rem
+        margin-bottom: .5rem
+
+      .profile
+        margin: 1rem 0
+
+    .others-infos
+      margin: 1rem 0
+
+      .name
+        font-size: 18px
+        font-weight: 600
+        margin-bottom: 0.3rem
+
+  /***********      hotels      ***********/
+  .hotels
+    .search-for-hotels
+      .search-box
+        @include grid(1fr)
+
+    .list
+      .item
+        .body
+          width: 100%
+          @include flex($justify: flex-start)
+          flex-direction: column
+          align-items: flex-start
+
+          .image-sec
+            width: 100%
+            height: 180px
+
+          .details-sec
+            width: 100%
+
+  .hotel-details
+    .all-images
+      .images
+        grid-template-areas: 'img1 img1 img1 img1' 'img2 img2 img3 img3' 'img4 img4 img5 img5'
